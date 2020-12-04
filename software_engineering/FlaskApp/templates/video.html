@@ -1,0 +1,16 @@
+<html>
+  <head>
+      <title> Web Viewer DEMO </title>
+
+  </head>
+
+  <body>
+    {% if storename %}
+    <h1>{{ storename }}</h1>
+    {% else %}
+    <h1>Welcome!</h1>
+    {% endif %}
+    <img src="{{ url_for('cam')}}">
+
+  </body>
+</html>

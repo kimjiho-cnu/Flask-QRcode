@@ -1,0 +1,48 @@
+.btn {
+    display: block;
+    background: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    color: orangered;
+    border-radius: 0;
+    transition: all 0.7s ease-out;
+    background: linear-gradient(270deg, rgba(223, 190, 106, 0.8), rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    border: 5px solid Tomato;
+    border-radius: 8px;
+    width: 40%;
+    height: 15%;
+    position: relative;
+    top: 15%;
+    left: 30%;
+    right: 30%;
+}
+
+.btn:hover {
+    color: #fff;
+    border: 1px solid rgba(223, 190, 106, 0);
+    color: $ white;
+    background-position: 99% 50%;
+}
+
+#firstMent{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+body {
+    /*background: #204d74;*/
+    background: MediumSeaGreen;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arials, sans;
+}
