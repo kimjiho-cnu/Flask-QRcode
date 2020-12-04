@@ -40,6 +40,9 @@ class Variable(object):
     def getBarcode(self, **kwargs):
         return self.barcode_data
 
+@app.route('/setting')
+def setting():
+    return render_template('setting.html')
 
 @app.route('/video')
 @app.route('/video/<storename>')
@@ -62,7 +65,6 @@ def read_cam():
     variable = Variable()
     while True:
         ret, img = camera.read()
-        ##############################
         if not ret:
             continue
 
@@ -76,9 +78,6 @@ def read_cam():
             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
             qrTemp = variable.getBarcode().split("|")
-            # if(len(qrTemp) == 4):
-            #     print("Fromat of Qrcode is wrong!")
-            #     break
             text = '%s (%s)' % (qrTemp[0], barcode_type)
             cv2.putText(img, text, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
 

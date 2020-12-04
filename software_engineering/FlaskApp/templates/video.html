@@ -1,16 +1,28 @@
 <html>
-  <head>
-      <title> Web Viewer DEMO </title>
+<head>
+    <title> Web Viewer DEMO </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/video.css">
 
-  </head>
+</head>
 
-  <body>
-    {% if storename %}
-    <h1>{{ storename }}</h1>
-    {% else %}
-    <h1>Welcome!</h1>
-    {% endif %}
-    <img src="{{ url_for('cam')}}">
+<body>
 
-  </body>
+
+{% if storename %}
+<br><br>
+<span id="pagename">{{ storename }}</span>
+{% else %}
+<div id="getStoreName">
+  <p>가게 이름</p>
+  <input type="text" id="storename" placeholder="ex) **편의점">
+
+    <button type="button" id="userBut" class="btn btn-info" onclick="makeUserUrl()">Check!</button>
+
+</div>
+{% endif %}
+
+<img src="{{ url_for('cam')}}" id="scanvideo">
+
+</body>
 </html>

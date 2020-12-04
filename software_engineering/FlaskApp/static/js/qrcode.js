@@ -8,17 +8,22 @@ function makeUserUrl() {
     let userMailAddress = emailValidation(mail.value);
 
     let flag =[0, 0]
-    if(userPhoneNum == false){
-        alert("휴대전화 번호를 다시 확인해 주세요!");
+    if(userPhoneNum == false){1
         pnum.value = "";
         flag[0] = 1;
     }
     if(userMailAddress == false){
-        alert("메일의 형식을 다시 확인해 주세요!");
         mail.value = "";
         flag[1] = 1;
     }
-    if(flag[0]==1 || flag[1]==1){
+    if(flag[0]==1 && flag[1]==1){
+        alert("휴대전화 번호와 메일을 다시 확인해 주세요!");
+        return false;
+    }else if(flag[0]==1){
+        alert("휴대전화 번호를 다시 확인해 주세요!");
+        return false;
+    }else if(flag[1]==1){
+        alert("메일의 형식을 다시 확인해 주세요!");
         return false;
     }
 
